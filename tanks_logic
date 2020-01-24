@@ -1,0 +1,38 @@
+- LT = LS + LW
+    - LS = 365 * VV * WV * KE * KS
+        - VV = (pi/4 * D^2) * HVO
+            - D = tank diameter, ft ******
+            - HVO = HS - HL + HRO
+                - HS = HS = tank shell height, ft ******
+                - HL = liquid height, ft ******
+                - HRO = (1/3) * HR
+                    - HR = SR * RS
+                        - SR = 0.625 if SR == null
+                        - RS = tank shell radius, ft
+        - WV = ((MV * PVA) / (R * TLA))
+            - MV = find_vapor_MW (Mi, P, xi, PVA)
+                - Mi = molecular weight of component i, lb/lb-mole
+                - P = true vapor pressure of component i, psia
+                - xi = liquid mole fraction of component i, lb-mole/lbmole
+                - PVA = find_VP_ADLST (P, xi)
+                    - P = true vapor pressure of component i, psia
+                    - xi = liquid mole fraction of component i, lb-mole/lbmole
+            - PVA = find_VP_ADLST (P, xi)
+                - P = true vapor pressure of component i, psia
+                - xi = liquid mole fraction of component i, lb-mole/lbmole
+            - R = the ideal gas constant, 10.731 psia ft3/lb-mole °R
+            - TLA = (0.44 * TAA) + (0.56 * TB) + (0.0079 * alpha * I)
+                - TAA = (TAX + TAN) / 2
+                    - TAX = Table 7.1-7
+                    - TAN = Table 7.1-7
+                    - alpha = Table 7.1-6
+                    - I = Table 7.1-7
+                - TB = TAA + (6 * alpha) - 1
+                    - TAA = 
+                    - alpha = Table 7.1-6
+                - alpha = Table 7.1-6
+        - KE = 0.0018 * delta_TV = 0.0018 * ((0.72 * (TAX − TAN)) + (0.028 * alpha * Ι)]
+        - KE = 0.04 where TAX | TAN | alpha | I == null
+        - KE = (delta_TV / TLA) + ((delta_PV - delta_PB) / (PA - PVA)) where KE > 0 & P > 0.1 psia
+        - KS = 
+    - LW = 

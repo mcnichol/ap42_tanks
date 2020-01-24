@@ -1,0 +1,42 @@
+LT = LS + LW
+LS = 365 * VV * WV * KE * KS
+VV = (pi/4 * D^2) * HVO
+LS = 365 * KE * (pi/4 * D^2) * HVO * KS * WV
+KE = 0.0018 * delta_TV = 0.0018 * ((0.72 * (TAX − TAN)) + (0.028 * alpha * Ι)]
+KE = 0.04
+KE = (delta_TV / TLA) + ((delta_PV - delta_PB) / (PA - PVA)) where KE > 0
+delta_TV = (0.72 * delta_TA) + (0.028 * alpha * I)
+delta_PV = PVX - PVN
+delta_PV = (0.5 * PVA * delta_TV)/TLA^2
+delta_PB = PBP - PBV
+delta_TA = TAX - TAN
+DE = sqrt((L * D) / (pi/4))
+HE = (pi/4) * D
+HVO = HS - HL + HRO
+HRO = (1/3) * HR
+HR = SR * RS
+HRO = HR * ((1/2) * ((1/6) * (HR/RS)^2)
+HR = RR - (RR^2 - RS^2)^0.5
+KS = 1 / (1 + (0.053 * PVA * HVO))
+WV = ((MV * PVA) / (R * TLA))
+
+PVA = 0
+def find_VP_ADLST (P, xi):
+    PVA += P * xi
+
+MV = 0
+def find_vapor_MW (Mi, P, xi, PVA):
+    MV += Mi * ((P * Xi) / PVA)
+
+PVA = exp(A - (B / TLA))
+TLA = (0.44 * TAA) + (0.56 * TB) + (0.0079 * alpha * I)
+TAA = (TAX + TAN) / 2
+TB = TAA + (6 * alpha) - 1
+LW = 0.001 * MV * PVA * Q * KN * KP
+N = (5.614 * Q) / VLX
+VLX = (pi/4) * D^2 * HLX
+Q = ((N * HLX) / 5.614) * (pi/4) * D^2
+LW = N * HLX * (pi/4) * D^2 * KN * KP * WV * KB
+
+if KN * ((PBP + PA) / (PI + PA)) > 1.0:
+    KB = (((PI + PA) / KN) - PVA) / (PBP + PA - PVA))
